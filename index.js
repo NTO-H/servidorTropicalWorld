@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 conectarDB();
 
 const corsOptions = {
-    origin: 'https://tropicalworld.vercel.app',  // Reemplaza con la URL de tu aplicación Angular
+    origin: 'https://purificadora.vercel.app/',  // Reemplaza con la URL de tu aplicación Angular
     credentials: true,
 };
 
@@ -22,12 +22,7 @@ app.use(bodyParser.json());
 
 
 // Rutas
-app.use('/correo', require('./routes/mensaje'));
-app.use('/comentarios', require('./routes/comentario'));
-app.use('/privado', require('./routes/privado'));
-app.use('/productos', require('./routes/producto'));
 app.use('/usuarios', require('./routes/usuario'));
-app.use('/dispositivos', require('./routes/dispositivo'));
 
 // Puerto de escucha
 const PORT = process.env.PORT || 4000;

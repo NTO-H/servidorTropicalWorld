@@ -1,4 +1,4 @@
-const {Usuario,PreguntasSecretas} = require("../models/Usuario");
+const Usuario = require("../models/Usuario");
 require("../routes/usuario");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -181,32 +181,6 @@ exports.crearUsuario = async (req, res) => {
       respuesta: respuesta,
       password: hashedPassword,
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     const resultado = await usuario.save();
     const { _id } = await resultado.toJSON();
