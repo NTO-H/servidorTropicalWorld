@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
-const PreguntaSecretaSchema=mongoose.Schema({
-  pregunta:{
-  type:String,
-  }
-  })
+
 const UsuarioSchema = mongoose.Schema({
   nombre: {
     type: String,
@@ -15,7 +11,6 @@ const UsuarioSchema = mongoose.Schema({
   },
   confirmpass: {
     type: String,
-    // required: true,
   },
   telefono: {
     type: String,
@@ -49,8 +44,7 @@ const UsuarioSchema = mongoose.Schema({
 });
 
 module.exports = {
- Usuario: mongoose.model("Usuario", UsuarioSchema),
- PreguntasSecretas:mongoose.model("PreguntasSecretas", PreguntaSecretaSchema),
+ Usuario: mongoose.model("Usuario", UsuarioSchema)
 };
 
 
