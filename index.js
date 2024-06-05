@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 conectarDB();
 
 const corsOptions = {
-    origin: 'https://purificadora.vercel.app/',  // Reemplaza con la URL de tu aplicación Angular
+    origin: 'https://tropicalworld.vercel.app/',  // Reemplaza con la URL de tu aplicación Angular
     credentials: true,
 };
 
